@@ -1,0 +1,8 @@
+binds {
+    Ctrl+Shift+Escape repeat=false hotkey-overlay-title="Task Manager: Open" { spawn "dms" "ipc" "call" "processlist" "open"; }
+    Mod+N repeat=false hotkey-overlay-title="Notepad: Toggle" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
+    Mod+P repeat=false { spawn "sh" "-c" "dms ipc call fullscreenPowerMenu toggle"; }
+    Mod+Space hotkey-overlay-title="App Launcher: Toggle" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+    Mod+Y repeat=false { spawn "sh" "-c" "dms ipc wallpaperCarousel toggle"; }
+    Super+T repeat=false hotkey-overlay-title="Theme: Toggle Light/Dark" { spawn "dms" "ipc" "call" "theme" "toggle"; }
+}

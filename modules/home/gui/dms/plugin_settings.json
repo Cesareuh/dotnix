@@ -1,0 +1,28 @@
+{
+  "dankKDEConnect": {
+    "enabled": true
+  },
+  "dmsconky": {
+    "addedApps": [
+      {
+        "exec": "faugus-launcher",
+        "icon": "faugus-launcher",
+        "name": "Faugus Launcher"
+      }
+    ]
+  },
+  "wallpaperCarousel": {
+    "enabled": true,
+    "borderWidth": 3,
+    "overlayOpacity": 80,
+    "carouselMode": "infinite"
+  },
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
+  },
+  "fullscreenPowerMenu": {
+    "enabled": true,
+    "menuOrientation": "horizontal"
+  }
+}
