@@ -17,7 +17,7 @@
 
 	outputs = inputs@{ self, nixpkgs, ... }:
 	{
-		nixosConfigurations.laptop = import ./hosts/laptop.nix inputs;
-		nixosConfigurations.server = import ./hosts/server.nix inputs;
+		nixosConfigurations.laptop = import ./hosts/laptop inputs;
+		nixosConfigurations.server = import ./hosts/server inputs;
 	};
 }
