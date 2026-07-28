@@ -1,7 +1,7 @@
 { inputs, pkgs, config, ... }:
 {
-	home.file.".config/DankMaterialShell/".source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/modules/home/gui/dms";
-	home.file.".config/wallpapers/".source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/modules/home/gui/wallpapers";
+	home.file.".config/DankMaterialShell/".source = config.lib.file.mkOutOfStoreSymlink "/etc/dotnix/modules/home/gui/dms";
+	home.file.".config/wallpapers/".source = config.lib.file.mkOutOfStoreSymlink "/etc/dotnix/modules/home/gui/wallpapers";
 
 	home.sessionVariables = {
 		QT_QPA_PLATFORMTHEME = "qt6ct";
