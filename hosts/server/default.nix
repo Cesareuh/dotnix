@@ -11,7 +11,7 @@ nixpkgs.lib.nixosSystem {
 
 		../../modules/system/server/ssh.nix
 		../../modules/system/server/caddy.nix
-		../../modules/system/server/podman.nix
+		../../modules/system/server/containers.nix
 
 		../../modules/users/nogui/system.nix
 		../../modules/users/nogui/networking.nix
