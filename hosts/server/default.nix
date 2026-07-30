@@ -6,6 +6,7 @@ nixpkgs.lib.nixosSystem {
 	};
 	modules = [
 		./hardware-configuration.nix
+		./networking.nix
 
 		../../modules/system/configuration.nix
 
@@ -14,7 +15,6 @@ nixpkgs.lib.nixosSystem {
 		../../modules/system/server/containers.nix
 
 		../../modules/users/nogui/system.nix
-		../../modules/users/nogui/networking.nix
 
 		inputs.musnix.nixosModules.musnix
 		inputs.home-manager.nixosModules.home-manager {

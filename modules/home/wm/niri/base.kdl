@@ -1,10 +1,11 @@
 input {
     keyboard {
         xkb {
-            layout "us"
+            layout "us, fr"
             model ""
             rules ""
             variant "altgr-intl"
+			options "grp:alt_shift_toggle"
         }
         repeat-delay 600
         repeat-rate 25

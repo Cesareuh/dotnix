@@ -8,6 +8,7 @@
 			# use dnscrypt, or proxy dns as described above
 			# dns = [ "127.0.0.1" ];
 			privateKeyFile = "/etc/wireguard/privatekey";
+			mtu = 1248;
 
 			peers = [
 			{
