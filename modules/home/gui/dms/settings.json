@@ -317,7 +317,7 @@
       "enabled": true
     }
   ],
-  "networkPreference": "auto",
+  "networkPreference": "wifi",
   "iconThemeDark": "System Default",
   "iconThemeLight": "System Default",
   "iconThemePerMode": false,
@@ -844,6 +844,12 @@
           "height": 179,
           "x": 24,
           "y": 47
+        },
+        "": {
+          "width": 120,
+          "height": 120,
+          "x": 0,
+          "y": 0
         }
       },
       "group": null
@@ -889,6 +895,12 @@
           "height": 239,
           "x": 8,
           "y": 838
+        },
+        "": {
+          "width": 160,
+          "height": 180,
+          "x": 0,
+          "y": 0
         }
       }
     },
@@ -914,6 +926,12 @@
           "height": 146,
           "x": 1490,
           "y": 934
+        },
+        "": {
+          "width": 400,
+          "height": 60,
+          "x": 0,
+          "y": 0
         }
       },
       "group": null
