@@ -1,0 +1,4 @@
+{ ... }:
+{
+	services.rsync.enable = true;
+}

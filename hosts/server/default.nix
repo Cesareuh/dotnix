@@ -15,16 +15,5 @@ nixpkgs.lib.nixosSystem {
 		../../modules/system/server/containers.nix
 
 		../../modules/users/nogui/system.nix
-
-		inputs.musnix.nixosModules.musnix
-		inputs.home-manager.nixosModules.home-manager {
-			home-manager = {
-				useGlobalPkgs = true;
-				useUserPackages = true;
-				extraSpecialArgs = { inherit inputs; };
-				users.nogui = import ../../modules/users/nogui/home.nix;
-			};
-		}
 	];
-
 }
