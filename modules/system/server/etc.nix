@@ -1,4 +1,6 @@
-{ ... }:
+{ pkgs, ... }:
 {
-	services.rsync.enable = true;
+	environment.systemPackages = with pkgs; [
+		rsync
+	];
 }
