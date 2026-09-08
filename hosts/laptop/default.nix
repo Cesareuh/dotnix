@@ -16,6 +16,8 @@ nixpkgs.lib.nixosSystem {
 		../../modules/system/music.nix
 		../../modules/system/gpu/nvidia.nix
 
+		../../modules/system/virtualisation.nix
+
 		../../modules/users/jean/system.nix
 
 		inputs.musnix.nixosModules.musnix

@@ -45,6 +45,9 @@
 		distrho-ports
 		tuxguitar
 
+		# Cours 
+		rstudio
+
 		# Other
 		baobab
 		legcord

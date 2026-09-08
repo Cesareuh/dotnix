@@ -25,6 +25,9 @@
 		git
 		tmux
 		cryptsetup
+		_7zz
+		zip
+		unzip
 	];
 
 	system.stateVersion = "25.11";
