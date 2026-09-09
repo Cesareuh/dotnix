@@ -9,6 +9,21 @@
 		podman-compose
 	];
 
+	services.immich = {
+		enable = true;
+		port = 2283;
+		mediaLocation = "/srv/data/immich";
+	};
+
+	services.beszel.hub = {
+		enable = true;
+		port = 9020;
+	};
+	services.beszel.agent = {
+		enable = true;
+		environmentFile = "/srv/env/beszel.env";
+	};
+
 	services.collabora-online = {
 		enable = true;
 		port = 9980; # default
@@ -19,16 +34,19 @@
 					termination = true;
 				};
 
-				# Listen on loopback interface only, and accept requests from ::1
 				# net = {
-				# 	listen = "loopback";
-				# 	post_allow.host = ["::1"];
+				# 	listen = "127.0.0.1";
+				# 	proto = "IPv4";
+				# 	proxy_prefix = true;
 				# };
 
 				# Restrict loading documents from WOPI Host nextcloud.example.com
 				storage.wopi = {
 					"@allow" = true;
-					host = ["cloud.cesareuh.fr"];
+					host = [
+						"cloud.cesareuh.fr"
+						"https://cloud.cesareuh.fr"
+					];
 				};
 
 				# Set FQDN of server
@@ -76,7 +94,7 @@
 					];
 					frame-src = [
 						"'self'"
-							"blob:"
+						"blob:"
 						"https://embed.diagrams.net"
 
 # Here is the culprit, put your own office service's URL
@@ -129,6 +147,12 @@
 		"/srv/data/opencloud"
 	];
 
+	systemd.tmpfiles.rules = [
+		"L+ /srv/data/opencloud/config/csp.yaml - - - - /etc/opencloud/csp.yaml"
+		"L+ /srv/data/opencloud/config/proxy.yaml - - - - /etc/opencloud/proxy.yaml"
+	];
+
+	# A transformer en nix natif
 	virtualisation.oci-containers.containers = {
 		vaultwarden = {
 			image = "docker.io/vaultwarden/server:1.37.0";
@@ -138,46 +162,5 @@
 			volumes = [ "/srv/data/vaultwarden/:/data/" ];
 			environment.DOMAIN = "https://vw.cesareuh.fr";
 		};
-
-# opencloud = {
-# 	image = "docker.io/opencloudeu/opencloud-rolling:7.3.0";
-# 	user = "1000:1000";
-# 	autoStart = true;
-# 	ports = [ "9200:9200" ];
-# 	entrypoint = "/bin/sh";
-# 	cmd = [ "-c" "opencloud init" ];
-# 	volumes = [ 
-# 		"/srv/data/opencloud/data:/var/lib/opencloud"
-# 		"/srv/data/opencloud/config:/etc/opencloud"
-# 	];
-# 	environmentFiles = [ "/srv/env/opencloud.env" ];
-# };
-
-# ---------------- NEXTCLOUD
-
-# redis = {
-# 	image = "docker.io/redis:alpine";
-# 	autoStart = true;
-# };
-#
-# db = {
-# 	image = "docker.io/postgres:18.4";
-# 	autoStart = true;
-# 	volumes = [ "/srv/data/postgres:/var/lib/postgresql" ];
-# 	environmentFiles = [ "/srv/env/postgres.env" ];
-# };
-#
-# nextcloud = {
-# 	image = "docker.io/nextcloud:34.0.2-fpm";
-# 	autoStart = true;
-# 	dependsOn = [ "db" "redis" ];
-# 	volumes = [ "/srv/data/nextcloud:/var/www/html" ];
-# 	environment = {
-# 		POSTGRES_HOST = "db";
-# 		REDIS_HOST = "redis";
-# 	};
-# 	environmentFiles = [ "/srv/env/nextcloud.env" ];
-# };
-
 	};
 }
