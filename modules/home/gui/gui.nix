@@ -47,6 +47,7 @@
 
 		# Cours 
 		rstudio
+		pgadmin4-desktopmode
 
 		# Other
 		baobab
