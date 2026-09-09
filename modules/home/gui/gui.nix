@@ -45,6 +45,10 @@
 		distrho-ports
 		tuxguitar
 
+		# Cours 
+		rstudio
+		pgadmin4-desktopmode
+
 		# Other
 		baobab
 		legcord

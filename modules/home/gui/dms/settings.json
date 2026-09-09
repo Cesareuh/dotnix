@@ -400,11 +400,6 @@
   "fadeToDpmsEnabled": true,
   "fadeToDpmsGracePeriod": 5,
   "launchPrefix": "",
-  "brightnessDevicePins": {},
-  "wifiNetworkPins": {},
-  "bluetoothDevicePins": {},
-  "audioInputDevicePins": {},
-  "audioOutputDevicePins": {},
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
@@ -850,6 +845,12 @@
           "height": 120,
           "x": 0,
           "y": 0
+        },
+        "{ NULL SCREEN }": {
+          "width": 120,
+          "height": 120,
+          "x": 0,
+          "y": 0
         }
       },
       "group": null
@@ -901,6 +902,12 @@
           "height": 180,
           "x": 0,
           "y": 0
+        },
+        "{ NULL SCREEN }": {
+          "width": 160,
+          "height": 180,
+          "x": 0,
+          "y": 0
         }
       }
     },
@@ -928,6 +935,12 @@
           "y": 934
         },
         "": {
+          "width": 400,
+          "height": 60,
+          "x": 0,
+          "y": 0
+        },
+        "{ NULL SCREEN }": {
           "width": 400,
           "height": 60,
           "x": 0,
@@ -973,5 +986,5 @@
   "barInsetPaddingShared": -1,
   "barInsetPaddingSyncAll": false,
   "frameBarInsetPadding": -1,
-  "configVersion": 12
+  "configVersion": 13
 }

@@ -22,7 +22,6 @@
 		# CLI apps
 		brightnessctl
 		ffmpeg
-		p7zip
 		unrar
 	];
 }
