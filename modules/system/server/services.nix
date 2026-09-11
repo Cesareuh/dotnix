@@ -24,6 +24,29 @@
 		environmentFile = "/srv/env/beszel.env";
 	};
 
+	services.syncthing = {
+		enable = true;
+		openDefaultPorts = true;
+
+		dataDir = "/srv/data/syncthing";
+
+		guiAddress = "0.0.0.0:8384";
+
+		guiPasswordFile = "/srv/env/syncthing.passwd";
+		settings = {
+			gui.user = "syncthing";
+
+				folders = {
+					"Notes" = {
+						path = "/srv/data/syncthing/Notes";
+					};
+				};
+		};
+
+	};
+
+	# networking.firewall.allowedTCPPorts = [ 8384 ];
+
 	services.collabora-online = {
 		enable = true;
 		port = 9980; # default
