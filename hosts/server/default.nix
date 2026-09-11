@@ -11,7 +11,7 @@ nixpkgs.lib.nixosSystem {
 		../../modules/system/configuration.nix
 
 		../../modules/system/server/caddy.nix
-		../../modules/system/server/containers.nix
+		../../modules/system/server/services.nix
 		../../modules/system/server/etc.nix
 		../../modules/system/server/ssh.nix
 

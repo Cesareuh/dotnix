@@ -14,6 +14,9 @@
 		virtualHosts."stats.cesareuh.fr".extraConfig = ''
 			reverse_proxy http://127.0.0.1:9020
 		'';
+		virtualHosts."sync.cesareuh.fr".extraConfig = ''
+			reverse_proxy http://127.0.0.1:8384
+		'';
 		virtualHosts."office.cesareuh.fr".extraConfig = ''
 			reverse_proxy http://127.0.0.1:9980
 		'';
