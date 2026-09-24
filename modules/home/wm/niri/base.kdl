@@ -159,8 +159,8 @@ binds {
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
 
-    Mod+Space { spawn "fuzzel"; }
-    Mod+Return { spawn "ghostty"; }
+    // Mod+Space { spawn "fuzzel"; }
+    Mod+Return { spawn "kitty"; }
     Mod+W repeat=false { close-window; }
 
     Print { screenshot; }

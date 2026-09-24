@@ -13,9 +13,7 @@
 	programs.dms-shell.enable = true;
 	services.displayManager.dms-greeter = {
 		enable = true;
-		compositor = {
-			name = "niri"; # Required. Can be also "hyprland" or "sway"
-		};
+		compositor.name = "niri";
 
 		# Sync your user's DankMaterialShell theme with the greeter. You'll probably want this
 		configHome = "/home/jean";

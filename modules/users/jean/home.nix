@@ -7,6 +7,7 @@
 		../../home/shell/fish.nix
 		../../home/shell/starship.nix
 		../../home/wm/niri.nix
+
 	];
 
 	home.username = "jean";

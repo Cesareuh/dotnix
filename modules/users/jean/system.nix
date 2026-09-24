@@ -14,17 +14,10 @@
 		enable = true;
 		openDefaultPorts = true;
 
-		dataDir = "/home/jean/Sync";
+		dataDir = "/home/jean/.config/syncthing";
 
 		user = "jean";
 		group = "users";
 
-		settings = {
-			folders = {
-				"Notes" = {
-					path = "/home/jean/Notes";
-				};
-			};
-		};
 	};
 }

@@ -1,5 +1,10 @@
 { inputs, pkgs, config, ... }:
 {
+
+	imports = [
+		inputs.dcal.homeModules.dank-calendar
+	];
+
 	home.file.".config/DankMaterialShell/".source = config.lib.file.mkOutOfStoreSymlink "/etc/dotnix/modules/home/gui/dms";
 	home.file.".config/wallpapers/".source = config.lib.file.mkOutOfStoreSymlink "/etc/dotnix/modules/home/gui/wallpapers";
 
@@ -17,6 +22,8 @@
 		package = pkgs.vanilla-dmz;
 	};
 
+	programs.dank-calendar.enable = true;
+
 	home.packages = with pkgs; [
 
 		# Theming
@@ -29,6 +36,7 @@
 
 		# Desktop
 		libreoffice
+		obsidian
 
 		# Audio packages
 		pwvucontrol
@@ -37,7 +45,6 @@
 		# Music
 		alsa-scarlett-gui
 		ardour
-		reaper
 		x42-plugins
 		calf
 		lsp-plugins
@@ -46,30 +53,47 @@
 		tuxguitar
 
 		# Cours 
-		rstudio
+		# rstudio
 		pgadmin4-desktopmode
 
 		# Other
+		# vscodium
+		vscode
 		baobab
-		legcord
+		discord
+		deezer-desktop
+		# legcord
 		inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 		qbittorrent
 		xdg-desktop-portal-gnome
 		mpv
-		mangohud
 
-		(callPackage ./pkgs/davinci-resolve.nix {studioVariant = true;})
+		# davinci-resolve
+		# (callPackage ./pkgs/davinci-resolve.nix {studioVariant = true;})
+		(callPackage ./pkgs/davinci-resolve-free.nix {studioVariant = false;})
+		kdePackages.kdenlive
 
 		# Gaming
 		faugus-launcher
+		mangohud
 		wineWow64Packages.stable
 	] ++ pkgs.comixcursors.all;
 
 	programs = {
-		ghostty = {
+		# ghostty = {
+		# 	enable = true;
+		# 	enableFishIntegration = true;
+		# 	settings.theme = "dankcolors";
+		# };
+		kitty = {
 			enable = true;
-			enableFishIntegration = true;
-			settings.theme = "dankcolors";
+			shellIntegration.enableFishIntegration = true;
+			font.name = "Hack Nerd Font";
+
+			extraConfig = ''
+			include ~/.config/kitty/dank-theme.conf
+			include ~/.config/kitty/dank-tabs.conf
+			'';
 		};
 		obs-studio = {
 			enable = true;

@@ -21,6 +21,7 @@ nixpkgs.lib.nixosSystem {
 		../../modules/users/jean/system.nix
 
 		inputs.musnix.nixosModules.musnix
+		inputs.dcal.nixosModules.dank-calendar
 		inputs.home-manager.nixosModules.home-manager {
 			home-manager = {
 				useGlobalPkgs = true;

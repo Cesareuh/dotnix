@@ -1,0 +1,21 @@
+{
+  "lockfileVersion": 1,
+  "plugins": {
+    "activateLinux": {
+      "repo": "https://github.com/hthienloc/dms-activate-linux",
+      "commit": "34f359aedcac9d27ff5df51d43cc41031ea00f80"
+    },
+    "calculator": {
+      "repo": "https://github.com/rochacbruno/DankCalculator",
+      "commit": "1db5865419a40a33171a475855a59e0b8bf7187f"
+    },
+    "fullscreenPowerMenu": {
+      "repo": "https://github.com/JDKamalakar/DMS-Fullscreen_Power_Menu",
+      "commit": "d6a184c979696ad6ae24e98579d7ca9ba7c9268b"
+    },
+    "wallpaperCarousel": {
+      "repo": "https://github.com/motor-dev/wallpaperCarousel",
+      "commit": "761ecd1b7f347beee9f17909f8334d987c935a1a"
+    }
+  }
+}

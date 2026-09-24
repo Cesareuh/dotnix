@@ -24,5 +24,11 @@
   "fullscreenPowerMenu": {
     "enabled": true,
     "menuOrientation": "horizontal"
+  },
+  "discordVoice": {
+    "enabled": true
+  },
+  "dgpuStatus": {
+    "enabled": true
   }
 }
