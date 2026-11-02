@@ -35,12 +35,6 @@
 		guiPasswordFile = "/srv/env/syncthing.passwd";
 		settings = {
 			gui.user = "syncthing";
-
-				folders = {
-					"Notes" = {
-						path = "/srv/data/syncthing/Notes";
-					};
-				};
 		};
 
 	};
