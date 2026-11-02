@@ -9,14 +9,10 @@
 			url = "github:musnix/musnix";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		zen-browser = {
-			url = "github:youwen5/zen-browser-flake";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-		dcal = {
-			url = "github:AvengeMedia/dankcalendar";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+		# dcal = {
+		# 	url = "github:AvengeMedia/dankcalendar";
+		# 	inputs.nixpkgs.follows = "nixpkgs";
+		# };
 	};
 
 	outputs = inputs@{ self, nixpkgs, ... }:

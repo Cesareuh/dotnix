@@ -2,7 +2,7 @@
 {
 
 	imports = [
-		inputs.dcal.homeModules.dank-calendar
+		# inputs.dcal.homeModules.dank-calendar
 	];
 
 	home.file.".config/DankMaterialShell/".source = config.lib.file.mkOutOfStoreSymlink "/etc/dotnix/modules/home/gui/dms";
@@ -22,7 +22,7 @@
 		package = pkgs.vanilla-dmz;
 	};
 
-	programs.dank-calendar.enable = true;
+	# programs.dank-calendar.enable = true;
 
 	home.packages = with pkgs; [
 
@@ -37,6 +37,9 @@
 		# Desktop
 		libreoffice
 		obsidian
+		feh
+		mpv
+		firefox
 
 		# Audio packages
 		pwvucontrol
@@ -45,6 +48,7 @@
 		# Music
 		alsa-scarlett-gui
 		ardour
+		reaper
 		x42-plugins
 		calf
 		lsp-plugins
@@ -57,20 +61,20 @@
 		pgadmin4-desktopmode
 
 		# Other
-		# vscodium
 		vscode
+
+		plantuml
+		graphviz
+
 		baobab
 		discord
 		deezer-desktop
-		# legcord
-		inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 		qbittorrent
 		xdg-desktop-portal-gnome
-		mpv
 
 		# davinci-resolve
 		# (callPackage ./pkgs/davinci-resolve.nix {studioVariant = true;})
-		(callPackage ./pkgs/davinci-resolve-free.nix {studioVariant = false;})
+		# (callPackage ./pkgs/davinci-resolve-free.nix {studioVariant = false;})
 		kdePackages.kdenlive
 
 		# Gaming
@@ -108,5 +112,8 @@
 				droidcam-obs
 			];
 		};
+
+		# Required for plantuml
+		java.enable = true;
 	};
 }

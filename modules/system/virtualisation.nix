@@ -1,5 +1,5 @@
 { ... }:
 {
-	virtualisation.virtualbox.host.enable = true;
-	users.extraGroups.vboxusers.members = [ "jean" ];
+	# virtualisation.virtualbox.host.enable = true;
+	# users.extraGroups.vboxusers.members = [ "jean" ];
 }
